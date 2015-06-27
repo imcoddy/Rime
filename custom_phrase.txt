@@ -17,5 +17,3 @@
 # no comment
 
 中州韻輸入法引擎	rime	3
-吐槽	kfsa	3
-吐槽	kfsg	3

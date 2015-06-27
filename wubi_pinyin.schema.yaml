@@ -8,7 +8,7 @@ custom_phrase:
   enable_sentence: false
   initial_quality: 1
   user_dict: custom_phrase
-customization: 1333906179
+customization: 182465351
 engine:
   processors:
     - ascii_composer
@@ -61,7 +61,7 @@ schema:
     
   name: "五笔·拼音"
   schema_id: wubi_pinyin
-  version: 0.9.custom.1333906179
+  version: 0.9.custom.182465351
 speller:
   delimiter: " ;'"
 switches:
@@ -75,7 +75,7 @@ switches:
   - name: ascii_punct
     states: ["。，", "．，"]
 translator:
-  dictionary: wubi86
+  dictionary: wubi_pinyin.extended
   disable_user_dict_for_patterns:
     - "^z.*$"
   enable_charset_filter: true
