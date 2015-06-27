@@ -1,0 +1,4 @@
+*.bin
+*userdb.txt
+*userdb/*
+sync

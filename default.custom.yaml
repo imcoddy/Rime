@@ -1,0 +1,13 @@
+patch:
+  schema_list:
+  - schema: wubi_pinyin
+  - schema: luna_pinyin_tw
+  ascii_composer/good_old_caps_lock: true
+  ascii_composer/switch_key:
+    Caps_Lock: commit_code
+    Shift_L: commit_code
+    Shift_R: noop
+    Control_L: noop 
+    Control_R: commit_code
+  menu:
+    page_size: 9
