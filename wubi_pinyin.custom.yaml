@@ -1,0 +1,17 @@
+patch:
+  "engine/translators":
+    - punct_translator
+    - reverse_lookup_translator
+    - table_translator@custom_phrase
+    - table_translator
+  custom_phrase:
+    dictionary: ""
+    user_dict: custom_phrase
+    db_class: stabledb
+    enable_completion: false
+    enable_sentence: false
+    initial_quality: 1
+  "key_binder/bindings":
+    #- { when: composing, accept: Return, send: Escape } #回车键是清除编码
+    - { when: has_menu, accept: semicolon, send: 2 } #分号和单引号选第2候选字、第3候选字
+    - { when: has_menu, accept: apostrophe, send: 3 }
