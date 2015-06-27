@@ -6,8 +6,8 @@ ascii_composer:
     Control_R: commit_code
     Shift_L: commit_code
     Shift_R: noop
-config_version: 0.36.custom.2603585871
-customization: 2603585871
+config_version: 0.36.custom.1342221240
+customization: 1342221240
 key_binder:
   bindings:
     - {accept: "Control+p", send: Up, when: composing}
@@ -120,6 +120,7 @@ recognizer:
 schema_list:
   - schema: wubi_pinyin
   - schema: luna_pinyin_tw
+  - schema: luna_pinyin_simp
 switcher:
   abbreviate_options: true
   caption: "〔方案選單〕"
