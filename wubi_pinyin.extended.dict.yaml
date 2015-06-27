@@ -1,0 +1,29 @@
+# Rime dictionary
+# encoding: utf-8
+#
+# Wubi Pinyin Extended Dictionary(Basic)
+#
+#   Qiu Di (imcoddy@gmail.com)
+#
+# 部署位置：
+# ~/.config/ibus/rime  (Linux)
+# ~/Library/Rime  (Mac OS)
+# %APPDATA%\Rime  (Windows)
+#
+# 於重新部署後生效
+#
+
+---
+name: wubi_pinyin.extended
+version: "2015.06.27"
+sort: by_weight
+use_preset_vocabulary: true
+import_tables:
+  - wubi86
+...
+
+吐槽	kfsa	1
+吐槽	kfsg	1
+吐槽	tucao	1
+吐槽无力	ksfl	1
+无力吐槽	flks	1
