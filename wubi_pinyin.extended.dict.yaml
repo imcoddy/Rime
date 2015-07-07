@@ -15,13 +15,26 @@
 
 ---
 name: wubi_pinyin.extended
-version: "2015.06.27"
+version: "2015.07.07"
 sort: by_weight
 use_preset_vocabulary: true
 import_tables:
   - wubi86
 ...
 
+比特币	xttm	1
+比特币	bitebi	1
+池袋	ibwa	1
+池袋	chidai	1
+六本木	usss	1
+六本木	liubenmu	1
+区块链	afql	1
+区块链	afqp	1
+区块链	qukuailian	1
+三田	dgll	1
+三田	santian	1
+涩谷	ivww	1
+涩谷	segu	1
 吐槽	kfsa	1
 吐槽	kfsg	1
 吐槽	tucao	1
