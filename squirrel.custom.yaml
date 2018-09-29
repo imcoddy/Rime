@@ -12,8 +12,8 @@ patch:
   
   us_keyboard_layout: true
   style/display_tray_icon: true
-  style/font_face: "Hiragino Sans GB W3"
-  style/spacing: 5
+  #style/font_face: "Hiragino Sans GB W3"
+  #style/spacing: 5
 
   # 输入法在某些应用下，默认用英文
   
@@ -54,7 +54,7 @@ patch:
 
   # 输入法面板配色方案
   
-  style/color_scheme: my_clean_white
+  style/color_scheme: light
 
 # Rime 预置配色方案(主题、皮肤)
 # 注：预设的配色方案及代码（指定为 style/color_scheme ）

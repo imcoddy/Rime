@@ -20,8 +20,8 @@ app_options:
     ascii_mode: true
     no_inline: true
 chord_duration: 0.1
-config_version: 0.22.custom.1254576186
-customization: 1254576186
+config_version: 0.22.custom.2730882597
+customization: 2730882597
 preset_color_schemes:
   apathy:
     author: "LIANG Hai "
@@ -204,10 +204,10 @@ show_notifications_when: appropriate
 style:
   border_height: 0
   border_width: 0
-  color_scheme: my_clean_white
+  color_scheme: light
   corner_radius: 10
   display_tray_icon: true
-  font_face: "Hiragino Sans GB W3"
+  font_face: "Lucida Grande"
   horizontal: false
   inline_preedit: false
   line_spacing: 1
