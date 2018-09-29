@@ -3,15 +3,15 @@
 
 schema:
   schema_id: luna_pinyin_fluency
-  name: 朙月拼音・語句流
-  version: "0.18"
+  name: 朙月拼音·語句流
+  version: "0.25"
   author:
     - 佛振 <chen.sst@gmail.com>
   description: |
-    朙月拼音・語句流錄入！
+    朙月拼音·語句流錄入！
     以空格分詞、標點或回車上屏。
   dependencies:
-    - cangjie5
+    - stroke
 
 switches:
   - name: ascii_mode
@@ -21,6 +21,8 @@ switches:
     states: [ 半角, 全角 ]
   - name: simplification
     states: [ 漢字, 汉字 ]
+  - name: ascii_punct
+    states: [ 。，, ．， ]
 
 engine:
   processors:
@@ -41,8 +43,8 @@ engine:
   translators:
     - punct_translator
     - table_translator@custom_phrase
-    - r10n_translator
     - reverse_lookup_translator
+    - script_translator
   filters:
     - simplifier
     - uniquifier
@@ -77,16 +79,18 @@ custom_phrase:
   dictionary: ""
   user_dict: custom_phrase
   db_class: stabledb
+  enable_completion: false
   enable_sentence: false
+  initial_quality: 1
 
 reverse_lookup:
-  dictionary: cangjie5
+  dictionary: stroke
   enable_completion: true
   prefix: "`"
   suffix: "'"
-  tips: 〔倉頡〕
+  tips: 〔筆畫〕
   preedit_format:
-    - "xlit|abcdefghijklmnopqrstuvwxyz|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符|"
+    - xlit/hspnz/一丨丿丶乙/
   comment_format:
     - xform/([nl])v/$1ü/
 
@@ -100,5 +104,5 @@ recognizer:
   import_preset: default
   patterns:
     number: "^[-+]?[0-9][.:0-9]*[%]?$"
-    punct: "^/[a-z]*$"
+    punct: "^/[0-9]*[a-z]*$"
     reverse_lookup: "`[a-z]*'?$"
