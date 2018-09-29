@@ -42,9 +42,20 @@ use_preset_vocabulary: true
 #雙拼不支持 luna_pinyin.cn_en 詞庫，請用戶手動禁用。
 import_tables:
   - luna_pinyin
-  - luna_pinyin.hanyu
-  - luna_pinyin.poetry
   - luna_pinyin.cn_en
+  - luna_pinyin.computer
+  - luna_pinyin.emoji
+  - luna_pinyin.hanyu
+  - luna_pinyin.kaomoji
+  - luna_pinyin.movie
+  - luna_pinyin.music
+  - luna_pinyin.name
+  - luna_pinyin.poetry
+  - luna_pinyin.sgmain
+  - luna_pinyin.i
+  #
+  - f_myphrases
+  - f_mysecretphrases
 ...
 
 一一列舉		1
@@ -132383,8 +132394,8 @@ import_tables:
 聽讀解
 劇裏
 恆河水
-耶魯式 
-雅禮式 
+耶魯式
+雅禮式
 雅禮
 京都哈佛式
 哈佛式
@@ -133190,7 +133201,7 @@ import_tables:
 勞動節二〇一三
 醉惡遊戲
 獄中無人
-王牌播音員 
+王牌播音員
 傾聽你心
 你心
 小鎮怪客托馬斯

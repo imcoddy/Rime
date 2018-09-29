@@ -1,28 +1,16 @@
-# Rime schema
-# encoding: utf-8
-
-schema:
-  schema_id: luna_pinyin_simp
-  name: 朙月拼音·简化字
-  version: "0.22"
-  author:
-    - 佛振 <chen.sst@gmail.com>
-  description: |
-    朙月拼音，簡化字輸出模式。
-
-switches:
-  - name: ascii_mode
-    reset: 0
-    states: [ 中文, 西文 ]
-  - name: full_shape
-    states: [ 半角, 全角 ]
-  - name: zh_simp
-    reset: 1
-    states: [ 漢字, 汉字 ]
-  - name: ascii_punct
-    states: [ 。，, ．， ]
-
+custom_phrase:
+  db_class: stabledb
+  dictionary: ""
+  enable_completion: false
+  enable_sentence: false
+  initial_quality: 1
+  user_dict: custom_phrase
+customization: 174140162
 engine:
+  filters:
+    - simplifier
+    - uniquifier
+    - cjk_minifier
   processors:
     - ascii_composer
     - recognizer
@@ -40,57 +28,77 @@ engine:
     - fallback_segmentor
   translators:
     - punct_translator
-    - table_translator@custom_phrase
+    - "table_translator@custom_phrase"
+    - reverse_lookup_translator
     - script_translator
-  filters:
-    - simplifier
-    - uniquifier
-
-speller:
-  alphabet: zyxwvutsrqponmlkjihgfedcba
-  delimiter: " '"
-  algebra:
-    - erase/^xx$/
-    - abbrev/^([a-z]).+$/$1/
-    - abbrev/^([zcs]h).+$/$1/
-    - derive/^([nl])ve$/$1ue/
-    - derive/^([jqxy])u/$1v/
-    - derive/un$/uen/
-    - derive/ui$/uei/
-    - derive/iu$/iou/
-    - derive/([aeiou])ng$/$1gn/
-    - derive/([dtngkhrzcs])o(u|ng)$/$1o/
-    - derive/ong$/on/
-    - derive/ao$/oa/
-    - derive/([iu])a(o|ng?)$/a$1$2/
-
-translator:
-  dictionary: luna_pinyin
-  prism: luna_pinyin_simp
-  preedit_format:
-    - xform/([nl])v/$1ü/
-    - xform/([nl])ue/$1üe/
-    - xform/([jqxy])v/$1u/
-
-custom_phrase:
-  dictionary: ""
-  user_dict: custom_phrase
-  db_class: stabledb
+    - "table_translator@english"
+english:
+  dictionary: easy_en
   enable_completion: false
   enable_sentence: false
-  initial_quality: 1
-
-simplifier:
-  option_name: zh_simp
-
+  initial_quality: "-3"
+  spelling_hints: 9
+key_binder:
+  bindings:
+    - {accept: "Control+Shift+4", toggle: zh_simp, when: always}
+    - {accept: "Control+Shift+dollar", toggle: zh_simp, when: always}
+  import_preset: default
 punctuator:
   import_preset: default
-
-key_binder:
-  import_preset: default
-  bindings:
-    - { when: always, accept: Control+Shift+4, toggle: zh_simp }
-    - { when: always, accept: Control+Shift+dollar, toggle: zh_simp }
-
 recognizer:
-  import_preset: default
+  patterns:
+    email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
+    punct: "^/([a-z]+|[0-9]0?)$"
+    uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
+    url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
+schema:
+  author:
+    - "佛振 <chen.sst@gmail.com>"
+  dependencies:
+    - easy_en
+  description: |
+    朙月拼音，簡化字輸出模式。
+    
+  name: "朙月拼音·简化字"
+  schema_id: luna_pinyin_simp
+  version: 0.22.custom.174140162
+simplifier:
+  option_name: zh_simp
+speller:
+  algebra:
+    - "xform/^([b-df-hj-np-tv-z])$/$1_/"
+    - "erase/^xx$/"
+    - "abbrev/^([a-z]).+$/$1/"
+    - "abbrev/^([zcs]h).+$/$1/"
+    - "derive/^([nl])ve$/$1ue/"
+    - "derive/^([jqxy])u/$1v/"
+    - "derive/un$/uen/"
+    - "derive/ui$/uei/"
+    - "derive/iu$/iou/"
+    - "derive/([aeiou])ng$/$1gn/"
+    - "derive/([dtngkhrzcs])o(u|ng)$/$1o/"
+    - "derive/ong$/on/"
+    - "derive/ao$/oa/"
+    - "derive/([iu])a(o|ng?)$/a$1$2/"
+  alphabet: zyxwvutsrqponmlkjihgfedcba
+  delimiter: " '"
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: ["中文", "西文"]
+  - name: full_shape
+    states: ["半角", "全角"]
+  - name: extended_charset
+    states: ["通用", "增廣"]
+  - name: zh_simp
+    reset: 1
+    states: ["漢字", "汉字"]
+  - name: ascii_punct
+    states: ["。，", "．，"]
+translator:
+  dictionary: luna_pinyin.extended
+  preedit_format:
+    - "xform/([nl])v/$1ü/"
+    - "xform/([nl])ue/$1üe/"
+    - "xform/([jqxy])v/$1u/"
+  prism: luna_pinyin_simp
