@@ -2,14 +2,15 @@
 # encoding: utf-8
 
 schema:
-  schema_id: wubi_pinyin
-  name: "五笔·拼音"
-  version: "0.9"
+  schema_id: wubi86
+  name: "五笔86"
+  version: "0.21"
   author:
     - 發明人 王永民先生
   description: |
-    五筆字型86版＋漢語拼音混合輸入。
+    五筆字型86版
     碼表源自 ibus-table
+    敲 z 鍵進入拼音反查
   dependencies:
     - pinyin_simp
 
@@ -47,11 +48,10 @@ engine:
 
 speller:
   delimiter: " ;'"
-  #max_code_length: 4  # 四碼頂字上屏
+  #max_code_length: 4
 
 translator:
   dictionary: wubi86
-  prism: wubi_pinyin
   enable_charset_filter: true
   enable_sentence: true
   enable_encoder: true
@@ -60,13 +60,9 @@ translator:
   disable_user_dict_for_patterns:
     - "^z.*$"
 
-abc_segmentor:
-  extra_tags:
-    - reverse_lookup
-
 reverse_lookup:
   dictionary: pinyin_simp
-  prefix: "`"
+  prefix: "z"
   suffix: "'"
   tips: 〔拼音〕
   preedit_format:
@@ -83,4 +79,4 @@ key_binder:
 recognizer:
   import_preset: default
   patterns:
-    reverse_lookup: "`[a-z]*'?$"
+    reverse_lookup: "^z[a-z]*'?$"

@@ -2,15 +2,16 @@
 # encoding: utf-8
 
 schema:
-  schema_id: cangjie5
-  name: 倉頡五代
-  version: "0.30"
+  schema_id: scj6
+  name: 快速倉頡
+  version: "0.9"
   author:
-    - 發明人 朱邦復先生
+    - 麥志洪 <makchehu@netvigator.com>
   description: |
-    第五代倉頡輸入法
-    碼表源自倉頡之友發佈的《五倉世紀版》
-    www.chinesecj.com
+    快速倉頡輸入法第六代
+    網址: http://www.scj2000.com
+    Copyright (C) 2002-2009 麥志洪 <makchehu@netvigator.com>
+    授權方式: GPL version 3
   dependencies:
     - luna_quanpin
 
@@ -22,8 +23,6 @@ switches:
     states: [ 半角, 全角 ]
   - name: simplification
     states: [ 漢字, 汉字 ]
-  - name: extended_charset
-    states: [ 常用, 增廣 ]
   - name: ascii_punct
     states: [ 。，, ．， ]
 
@@ -45,37 +44,24 @@ engine:
     - fallback_segmentor
   translators:
     - punct_translator
-    - reverse_lookup_translator
     - table_translator
+    - reverse_lookup_translator
   filters:
     - simplifier
     - uniquifier
-    - single_char_filter
 
 speller:
   alphabet: zyxwvutsrqponmlkjihgfedcba
-  delimiter: " ;"
-  #max_code_length: 5  # 五碼頂字上屏
+  delimiter: " ;'"
 
 translator:
-  dictionary: cangjie5
-  enable_charset_filter: true
-  enable_sentence: true
-  enable_encoder: true
-  encode_commit_history: true
-  max_phrase_length: 5
+  dictionary: scj6
   preedit_format:
-    - 'xform/^([a-z]*)$/$1\t（\U$1\E）/'
-    - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符|"
+    - "xlit|abcdefghijklmnopqrstuvwxyz;'|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符··|"
   comment_format:
     - "xlit|abcdefghijklmnopqrstuvwxyz~|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符～|"
   disable_user_dict_for_patterns:
     - "^z.*$"
-    - "^yyy.*$"
-
-abc_segmentor:
-  extra_tags:
-    - reverse_lookup  # 與拼音（反查碼）混打
 
 reverse_lookup:
   dictionary: luna_pinyin
@@ -90,11 +76,8 @@ reverse_lookup:
   comment_format:
     - "xlit|abcdefghijklmnopqrstuvwxyz|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符|"
 
-simplifier:
-  tips: all  # 簡化字模式下提示對應的傳統漢字
-
 punctuator:
-  import_preset: symbols
+  import_preset: default
 
 key_binder:
   import_preset: default
@@ -102,5 +85,4 @@ key_binder:
 recognizer:
   import_preset: default
   patterns:
-    punct: '^/([0-9]0?|[A-Za-z]+)$'
-    reverse_lookup: "`[a-z]*'?$|[a-z]+'$"
+    reverse_lookup: "`[a-z]*'?$"

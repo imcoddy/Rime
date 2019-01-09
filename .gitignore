@@ -1,5 +1,7 @@
 *.bin
 *userdb.txt
 *userdb/*
+trash/
+plum/
 sync
 user.yaml
