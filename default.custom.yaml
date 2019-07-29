@@ -80,6 +80,7 @@ patch:
 
   key_binder:
     bindings:
+      - {accept: Escape, toggle: ascii_mode, when: always}
       #
       # 快捷键，更多参见 ori_default.yaml
       #
