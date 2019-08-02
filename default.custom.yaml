@@ -24,10 +24,11 @@ patch:
     switch_key:
       Shift_L: commit_code
       Shift_R: commit_code
-      Control_L: clear
+      Control_L: noop
       Control_R: noop
       Caps_Lock: noop
       Eisu_toggle: clear
+      Escape: escape
 
   # 默认标点符号
   # (如果不灵，则 把 luna_pinyin_simp.custom.yaml 里的 punctuator 部分注释掉 )
