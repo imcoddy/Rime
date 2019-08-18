@@ -51,6 +51,10 @@ patch:
       ascii_mode: true
       no_inline: true
       vim_mode: true
+    com.happenapps.Quiver:
+      ascii_mode: true
+      no_inline: true
+      vim_mode: true
     com.apple.appstore:
       ascii_mode: true
     com.apple.calculator:
