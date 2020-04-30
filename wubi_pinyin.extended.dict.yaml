@@ -22,6 +22,7 @@ import_tables:
   - wubi86
 ...
 
+爸妈	wqvc	1
 比特币	xttm	1
 比特币	bitebi	1
 池袋	ibwa	1
@@ -40,3 +41,93 @@ import_tables:
 吐槽	tucao	1
 吐槽无力	ksfl	1
 无力吐槽	flks	1
+
+# --- 专业名词 ---
+# 计算机相关
+json	json
+java	java
+php	php
+javascript	java
+html	html
+PhpStorm	phps
+WebStorm	webs
+react	React
+IDEA	idea
+vue	vue
+跨域	khfa
+键帽	qvmh
+应用程序	yety
+翻墙	toff
+增删改查	fmns
+父类	wqod
+子类	bbod
+抽象类	rqod
+形参	gacd
+实参	pucd
+实体类	pwod
+swift	swft
+开发者	gnft
+
+# 媒体
+爱范儿	eaqt
+
+# 金融
+火币	ootm
+k线	kxg
+
+# 化妆品品牌
+奥洛菲	tiad
+欧莱雅	aaah
+韩芬娜	favv
+春纪	dwxn
+碧思泉	glri
+魅力可诗	rlsy
+美肌颜	ueut
+
+# --- eMoji ---
+😆	ddtt
+😂	ttkk
+🤣	ttkk
+🥰	ep
+🤩	kffg
+🥶	dndn
+🤗	tada
+👍	xk
+😭	ddkk
+🥳	ydpy
+😎	tdgk
+😉	ryhv
+😊	skep
+😏	klkl
+😝	ftud
+😛	ftud
+😋	ftud
+😚	usus
+😘	爱你
+😗	usus
+😙	usus
+🤩	wow
+😤	tgrn
+😳	ks
+😡	tgrn
+🤬	kkww
+🤫	khag
+🤔	lnft
+🤗	tada
+😓	ifh
+🤮	tgug
+🤒	ntoa
+🤧	thiu
+👽	qjww
+🤐	ufkh
+💀	meme
+💩	ococ
+👻	rqc
+😈	ahgo
+🐶	qtqk
+🐱	qtal
+🐭	vnu
+🐹	vnu
+🐽	qtfj
+🐷	qtfj
+🙈	rddm
