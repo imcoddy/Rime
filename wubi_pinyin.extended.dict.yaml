@@ -20,6 +20,7 @@ sort: by_weight
 use_preset_vocabulary: true
 import_tables:
   - wubi86
+  - wubi86.extended
 ...
 
 爸妈	wqvc	1
