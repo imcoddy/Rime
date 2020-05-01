@@ -12,6 +12,7 @@ schema:
     碼表源自 ibus-table
   dependencies:
     - pinyin_simp
+    - luna_pinyin
 
 switches:
   - name: ascii_mode
