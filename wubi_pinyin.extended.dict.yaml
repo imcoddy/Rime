@@ -28,8 +28,16 @@ import_tables:
 比特币	bitebi	1
 池袋	ibwa	1
 池袋	chidai	1
+树莓派	sair	1
+公众号	wwkg	1
+矿机	kuangji	1
+矿机	dysm	1
 六本木	usss	1
 六本木	liubenmu	1
+曼达拉	mandala	1
+曼达拉	jdru	1
+邱少	rgit	1
+邱少贤	rijc	1
 区块链	afql	1
 区块链	afqp	1
 区块链	qukuailian	1
@@ -41,47 +49,6 @@ import_tables:
 吐槽	kfsg	1
 吐槽	tucao	1
 吐槽无力	ksfl	1
+微信	tmwy	1
 无力吐槽	flks	1
-
-# --- 专业名词 ---
-# 计算机相关
-json	json
-java	java
-php	php
-javascript	java
-html	html
-PhpStorm	phps
-WebStorm	webs
-react	React
-IDEA	idea
-vue	vue
-跨域	khfa
-键帽	qvmh
-应用程序	yety
-翻墙	toff
-增删改查	fmns
-父类	wqod
-子类	bbod
-抽象类	rqod
-形参	gacd
-实参	pucd
-实体类	pwod
-swift	swft
-开发者	gnft
-
-# 媒体
-爱范儿	eaqt
-
-# 金融
-火币	ootm
-k线	kxg
-
-# 化妆品品牌
-奥洛菲	tiad
-欧莱雅	aaah
-韩芬娜	favv
-春纪	dwxn
-碧思泉	glri
-魅力可诗	rlsy
-美肌颜	ueut
-
+中本聪	ksbu	1

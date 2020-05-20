@@ -34,8 +34,10 @@ patch:
       no_inline: false
     com.runningwithcrayons.Alfred-3:
       ascii_mode: true
+      no_inline: true
     com.runningwithcrayons.Alfred-4:
       ascii_mode: true
+      no_inline: true
     com.blacktree.Quicksilver:
       ascii_mode: true
     org.vim.MacVim:
